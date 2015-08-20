@@ -1,5 +1,14 @@
 *.zip
 
+# Android
+*.apk
+bin/
+obj/
+gen/
+assets/
+local.properties
+projects/FacebookSample/proj.android/libs/
+
 # Xcode
 .DS_Store
 build/

@@ -29,7 +29,7 @@ bool HelloWorld::init()
         return false;
     }
     
-    char* defaultFont = "arial.ttf";
+    const char* defaultFont = "arial.ttf";
     int defaultFontSize = 32;
     
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
@@ -128,10 +128,12 @@ void HelloWorld::onLogout(CCObject* sender)
 void HelloWorld::onCheckStatus(CCObject* sender)
 {
     CCLOG("##FB> permission list: ");
-    for (auto& permission : PluginFacebook::getPermissionList())
+    std::vector<std::string> perms = PluginFacebook::getPermissionList();
+    for (int i=0; i < perms.size(); ++i)
     {
-        CCLOG("##FB>> permission %s", permission.data());
+        CCLOG("##FB>> permission %s", perms[i].c_str());
     }
+    
     CCLOG("##FB> access token: %s", PluginFacebook::getAccessToken().c_str());
     CCLOG("##FB> user id: %s", PluginFacebook::getUserID().c_str());
     CCLOG("##FB> FBSDK version: %s", PluginFacebook::getSDKVersion().c_str());
