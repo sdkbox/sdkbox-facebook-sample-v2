@@ -174,9 +174,10 @@ namespace sdkbox
          */
         static std::vector<FBGraphUser> getFriends();
 
-#ifdef OBFUSCATED
-        _81930f7f522aff98dc79f62df0e7d59b
-#endif
+        /**
+         * @brief check whether can present Facebook App
+         */
+        static bool canPresentWithFBApp(const FBShareInfo& info);
     };
 }
 
