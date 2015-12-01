@@ -140,7 +140,7 @@ void HelloWorld::onCheckStatus(CCObject* sender)
 }
 void HelloWorld::onGetMyInfo(CCObject* sender)
 {
-    PluginFacebook::FBAPIParam params;
+    sdkbox::FBAPIParam params;
     PluginFacebook::api("me", "GET", params, "me");
 }
 
@@ -271,6 +271,23 @@ CCLOG("##FB %s: %d = %s", __FUNCTION__, ok, msg.data());
         CCLOG("##FB");
     }
 }
+void HelloWorld::onRequestInvitableFriends( const sdkbox::FBInvitableFriendsInfo& friends )
+{
+    CCLOG("##FB> %s", __FUNCTION__);
+}
+void HelloWorld::onInviteFriendsWithInviteIdsResult( bool result, const std::string& msg )
+{
+    CCLOG("##FB> %s", __FUNCTION__);
+}
+void HelloWorld::onInviteFriendsResult( bool result, const std::string& msg )
+{
+    CCLOG("##FB> %s", __FUNCTION__);
+}
+void HelloWorld::onGetUserInfo( const sdkbox::FBGraphUser& userInfo )
+{
+    CCLOG("##FB> %s", __FUNCTION__);
+}
+
 
 
 
