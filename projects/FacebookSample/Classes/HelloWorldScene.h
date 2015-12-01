@@ -42,7 +42,12 @@ private:
     void onAPI(const std::string& key, const std::string& jsonData);
     void onPermission(bool isLogin, const std::string& msg);
     void onFetchFriends(bool ok, const std::string& msg);
-    
+
+    void onRequestInvitableFriends( const sdkbox::FBInvitableFriendsInfo& friends );
+    void onInviteFriendsWithInviteIdsResult( bool result, const std::string& msg );
+    void onInviteFriendsResult( bool result, const std::string& msg );
+
+    void onGetUserInfo( const sdkbox::FBGraphUser& userInfo );
 };
 
 #endif // __HELLOWORLD_SCENE_H__
