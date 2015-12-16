@@ -49,6 +49,13 @@
 	<string>1046985905319778</string>
 	<key>FacebookDisplayName</key>
 	<string>SDKBOX Sample</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
