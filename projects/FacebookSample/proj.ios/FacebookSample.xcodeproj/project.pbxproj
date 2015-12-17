@@ -2359,6 +2359,14 @@
 					"\"FBSDKShareKit.framework\"",
 				);
 				OTHER_CFLAGS = "-O2";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(_COCOS_LIB_IOS_BEGIN)",
+					"$(_COCOS_LIB_IOS_END)",
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+				);
 				PRODUCT_NAME = FacebookSample;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2412,6 +2420,14 @@
 					"\"FBSDKCoreKit.framework\"",
 					"\"FBSDKLoginKit.framework\"",
 					"\"FBSDKShareKit.framework\"",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(_COCOS_LIB_IOS_BEGIN)",
+					"$(_COCOS_LIB_IOS_END)",
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
 				);
 				PRODUCT_NAME = FacebookSample;
 				PROVISIONING_PROFILE = "";
